@@ -9,4 +9,11 @@ export default {
 
     return false
   },
+  ready: () => {
+    if (navigator.serviceWorker) {
+      return navigator.serviceWorker.ready;
+    }
+
+    return false;
+  }
 }
